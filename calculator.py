@@ -92,7 +92,7 @@ class Calculator():
                 self.current_display['fractional_part'].clear()
                 self.current_display['decimal'] = False 
 
-        def equal_func(self):
+        def equal_func(self):   
                 """ equals button functionality """
                 self.current_display['y_val'] = self.format_number()
                 try:
