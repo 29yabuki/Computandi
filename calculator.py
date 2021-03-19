@@ -63,14 +63,14 @@ class Calculator():
                 return formatted_number
 
         def update_display(self, display_value):
-                ''' updates the calculator display '''
+                """ updates the calculator display """
                 try:
                         window['_display_'].update(value='{:,.4f}'.format(display_value))
                 except:
                         window['_display_'].update(value=display_value)
 
         def number_func(self, event):
-                ''' functionality of the number buttons '''
+                """ functionality of the number buttons """
                 if self.current_display['decimal']:
                         self.current_display['fractional_part'].append(event)
                 else:
@@ -78,7 +78,7 @@ class Calculator():
                 self.update_display(self.format_number())
 
         def operator_func(self, event):
-                ''' operator button functionality '''
+                """ operator button functionality """
                 self.current_display['operator'] = event
                 try:
                         self.current_display['x_val'] = self.format_number()
@@ -87,13 +87,13 @@ class Calculator():
                 self.clear_func()
                 
         def clear_func(self):
-                ''' clear button events '''
+                """ clear button events """
                 self.current_display['whole_number'].clear()
                 self.current_display['fractional_part'].clear()
                 self.current_display['decimal'] = False 
 
         def equal_func(self):
-                ''' equals button functionality '''
+                """ equals button functionality """
                 self.current_display['y_val'] = self.format_number()
                 try:
                         if self.current_display['operator'] != '^':
