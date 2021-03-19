@@ -45,7 +45,8 @@ layout = [
     [sg.Button('=',**equals)]
 ]
 
-window = sg.Window('computandi', size=(560, 600), layout=layout, background_color="#272533", return_keyboard_events=True)
+window = sg.Window('computandi', size=(560, 600), layout=layout, 
+                   background_color="#272533", return_keyboard_events=True)
 
 ##- Functionality
 class Calculator():
@@ -57,8 +58,7 @@ class Calculator():
 
         def format_number(self):
                 """ formats the number to combine both whole number 
-                    and fractional part of a number 
-                """
+                    and fractional part of a number """
                 formatted_number = float(f"{''.join(self.current_display['whole_number'])}.{''.join(self.current_display['fractional_part'])}")
                 return formatted_number
 
@@ -97,11 +97,13 @@ class Calculator():
                 self.current_display['y_val'] = self.format_number()
                 try:
                         if self.current_display['operator'] != '^':
-                                self.current_display['result'] = eval(str(self.current_display['x_val']) + self.current_display['operator'] 
+                                self.current_display['result'] = eval(str(self.current_display['x_val']) 
+                                                                      + self.current_display['operator'] 
                                                                       + str(self.current_display['y_val']))
                         else:
-                                self.current_display['result'] = eval(str(self.current_display['x_val']) + '**' + 
-                                                                      str(self.current_display['y_val']))
+                                self.current_display['result'] = eval(str(self.current_display['x_val']) 
+                                                                      + '**' 
+                                                                      + str(self.current_display['y_val']))
                         self.update_display(self.current_display['result'])
                         self.clear_func()
                 except:
@@ -117,15 +119,15 @@ while True:
         break
     if event in ['0','1','2','3','4','5','6','7','8','9']:
         calc.number_func(event)
-    if event in ['Escape:27','C','CE']: # 'Escape:27 for keyboard control
+    if event in ['+','-','*', '^', '/', '//', '%']:
+        calc.operator_func(event)
+    if event in ['Escape:27','C','CE']: # 'Escape:27 is for keyboard control
         calc.clear_func()
         calc.update_display(0.0)
         calc.current_display['result'] = 0.0
-    if event in ['+','-','*', '^', '/', '//', '%']:
-        calc.operator_func(event)
-    if event == '=':
-        calc.equal_func()
     if event == '.':
         calc.current_display['decimal'] = True
     if event == '%':
         calc.update_display(calc.current_display['result'] / 100.0)
+    if event == '=':
+        calc.equal_func()
