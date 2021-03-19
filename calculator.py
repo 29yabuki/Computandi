@@ -45,7 +45,7 @@ layout = [
     [sg.Button('=',**equals)]
 ]
 
-window = sg.Window('computandi', size=(560, 600), layout=layout, 
+window = sg.Window('Computandi', size=(560, 600), layout=layout, 
                    background_color="#272533", return_keyboard_events=True)
 
 ##- Functionality
