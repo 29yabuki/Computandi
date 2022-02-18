@@ -1,6 +1,6 @@
 # <p align='center'>Computandi</p>
 
-<p align='center'>*_Computandi_* is a basic calculator made on Python 3 with PySimpleGUI</p>
+<p align='center'><b><i>Computandi</i></b> is a basic calculator made on Python 3 with PySimpleGUI</p>
 
 ## Features
 - Basic arithmetic operators including percent (%)
