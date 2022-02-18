@@ -13,4 +13,4 @@
 ![preview](https://github.com/29yabuki/PySimpleGui-Calculator/blob/main/images/computandi.png)
 
 ## Contributions
-If there are any comment or recommendations, always feel free to implement anything, submit pull requests, create issues, and discuss ideas with me.
+If there are any comments or recommendations, always feel free to implement anything, submit pull requests, create issues, and discuss ideas with me.
