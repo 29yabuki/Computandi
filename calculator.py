@@ -1,6 +1,6 @@
 import PySimpleGUI as sg
 
-##- Buttons Setting
+# Buttons Setting
 title = {'size': (25, 1),
          'justification':  'left',
          'background_color': '#272533', 
@@ -34,7 +34,7 @@ equals = {'size': (50, 1),
         'bind_return_key': True
         }
 
-##- Overall Layout
+# Overall Layout
 layout = [
     [sg.Text('computandi', **title)],
     [sg.Text('0.0000', **display)],
@@ -48,9 +48,8 @@ layout = [
 window = sg.Window('Computandi', size=(560, 600), layout=layout, 
                    background_color="#272533", return_keyboard_events=True)
 
-##- Functionality
+# Functionality
 class Calculator():
-        
         def __init__(self):
                 self.current_display = {'whole_number': [], 'fractional_part': [],
                                         'decimal': False, 'x_val': 0.0, 
@@ -110,7 +109,7 @@ class Calculator():
                         self.update_display("Math ERROR")
                         self.clear_func()
 
-#- Event Loop
+# Main Event Loop
 calc = Calculator()
 while True:
     event, values = window.read()
