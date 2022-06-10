@@ -109,7 +109,7 @@ class Calculator():
                         self.update_display("Math ERROR")
                         self.clear_func()
 
-# Main Event Loop
+# Main Event
 calc = Calculator()
 while True:
     event, values = window.read()
