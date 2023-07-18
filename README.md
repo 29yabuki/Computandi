@@ -8,7 +8,7 @@
 - Fully-functioning GUI
 
 ## Screenshots
-Here's a preview image of the program:
+Here's a preview image of the program.
 
 ![preview](https://github.com/29yabuki/PySimpleGui-Calculator/blob/main/images/computandi.png)
 
